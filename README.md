@@ -24,6 +24,11 @@ Snowplow Micro is hosted on Docker Hub : [snowplow/snowplow-micro](https://cloud
 $ docker run --mount type=bind,source=$(pwd)/example,destination=/config -p 9090:9090 snowplow/snowplow-micro:1.0.0 --collector-config /config/micro.conf --iglu /config/iglu.json
 ```
 
+working command:
+```
+docker run --mount type=bind,source=$(pwd)/micro/config,destination=/config -p 9090:9090 snowplow/snowplow-micro:1.0.0 --collector-config /config/micro.conf --iglu /config/iglu.json
+```
+
 ## 3. REST API
 
 Snowplow Micro offers 4 endpoints to query the data recorded.
